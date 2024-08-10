@@ -15,14 +15,45 @@ import { useState } from "react";
 import KakaoMap from "../components/kakao";
 import PopupWrapper from "../components/Popupwrapper";
 import SearchLocation from "../components/SearchLocation";
-import { useAppSelector } from "../store/store";
+import { useAppDispatch, useAppSelector } from "../store/store";
 import { Button } from "../components/button";
+import instance from "../api/instance";
+import { destinationActions } from "../store/destination";
 
 function Main() {
     const position = useAppSelector((state) => state.position);
-    const [option] = useState(true); //지도가 보일지 옵션을 설정
+    const dispatch = useAppDispatch();
+    const [option, setOption] = useState(true); //지도가 보일지 옵션을 설정
     const [location, setLocation] = useState(false);
     const [mode, setMode] = useState("");
+
+    const handleSubmit = () => {
+        if (position.start.adress === "" || position.end.adress === "") {
+            alert("출발지와 도착지를 입력해주세요");
+            return;
+        }
+
+        instance
+            .post("reservation", {
+                userPositionLatitude: position.start.x,
+                userPositionLongitude: position.start.y,
+                destinationLatitude: position.end.x,
+                destinationLongitude: position.end.y,
+            })
+            .then((res) => {
+                const routes = res.data.route;
+                routes.forEach((route: any) => {
+                    dispatch(
+                        destinationActions.setDestination({
+                            type: route.type,
+                            destination: route.destination,
+                        })
+                    );
+                });
+            });
+        setOption(false);
+    };
+
     return (
         <MainContainer>
             <PopupWrapper
@@ -79,7 +110,13 @@ function Main() {
                 <MainFooter>
                     <div></div>
 
-                    <Button disabled>승차 신청하기</Button>
+                    <Button
+                        onClick={() => {
+                            handleSubmit();
+                        }}
+                    >
+                        승차 신청하기
+                    </Button>
                 </MainFooter>
             )}
         </MainContainer>

@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import positionReducer from "./position";
+import destinationReducer from "./destination";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 const store = configureStore({
-    reducer: { position: positionReducer },
+    reducer: { position: positionReducer, destination: destinationReducer },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
