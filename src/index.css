@@ -1,14 +1,16 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 :root {
-    --MainColor: #4263b9;
-    --MidBlue: #dbdeef;
+    --MainColor: #304068;
+    --MainBlack: #1f1f1f;
+    --MidBlue: #b0b4c5;
     --LightBlue: #e7e9f5;
     --Grey: #797a7a;
-    --LightGrey: #d2d2d2;
+    --LightGrey: #efefef;
 }
 
 body,

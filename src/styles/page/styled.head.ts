@@ -34,7 +34,10 @@ export const HeadFooterTitle = styled.div`
 `;
 
 export const HeadImageContainer = styled.div`
-    height: 100%; /* Add this */
+    display: flex !important;
+    align-items: center;
+
+    height: 500px !important; /* Add this */
     & > img {
         width: 300px;
         margin: 0 auto;
