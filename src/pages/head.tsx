@@ -35,7 +35,7 @@ function Head() {
                         <img src="/src/assets/welcome.svg" alt="Image 2" />
                     </HeadImageContainer>
                     <HeadImageContainer>
-                        <img src="/src/assets/travel.svg" alt="Image 3" />
+                        <img src="/src/assets/world.svg" alt="Image 3" />
                     </HeadImageContainer>
                 </Slider>
             </HeadHeader>
@@ -43,7 +43,8 @@ function Head() {
                 <HeadFooterTitle>
                     <h1>Get where you need to go, with Dr.Travel</h1>
                     <p>
-                        Enjoy an easy and convenient trip to Pohang with the DRT bus
+                        Enjoy an easy and convenient trip to Pohang with the DRT
+                        bus
                     </p>
                 </HeadFooterTitle>
                 <Button
