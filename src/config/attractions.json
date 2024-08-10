@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Homigot",
+        "image": "/src/assets/호미곶.jpg",
+        "description": "A plaza at the eastern tip of Korea, known as the tail of the tiger."
+    },
+    {
+        "id": 2,
+        "name": "Youngil Beach",
+        "image": "/src/assets/영일대해수욕장.jpg",
+        "description": "A lively beach in Pohang with beautiful sandy shores."
+    },
+    {
+        "id": 3,
+        "name": "Jukdo Market",
+        "image": "/src/assets/죽도시장.jpg",
+        "description": "One of Korea's largest traditional markets, famous for fresh seafood."
+    },
+    {
+        "id": 4,
+        "name": "Guryongpo",
+        "image": "/src/assets/구룡포.jpg",
+        "description": "Guryongpo is a coastal town in Pohang known for its scenic harbor and historic sites."
+    },
+    {
+        "id": 5,
+        "name": "Pohang Space Walk",
+        "image": "/src/assets/포항스페이스워크.jpg",
+        "description": "A structure offering a high-altitude walking experience."
+    }
+]

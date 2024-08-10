@@ -29,6 +29,7 @@ export const MainLocationHeader = styled.div`
 `;
 
 export const MainLocationSelect = styled.div`
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin: 25px;
     padding: 25px;
     border-radius: 15px;
@@ -81,7 +82,6 @@ export const MainFooter = styled.div`
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     & > button {
         width: 100%;
@@ -97,4 +97,19 @@ export const MapContainer = styled.div`
     width: 100%;
     height: 100%;
     z-index: 0; /* Places the map below other content */
+`;
+
+export const MainFooterTitle = styled.div`
+    margin-top: 40px;
+    & h1 {
+        font-size: 1.4rem;
+    }
+    & p {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    & span {
+        color: var(--MainColor);
+    }
 `;

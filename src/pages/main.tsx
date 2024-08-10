@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     MainContainer,
     MainFooter,
+    MainFooterTitle,
     MainLocationHeader,
     MainLocationInputs,
     MainLocationSection,
@@ -19,6 +20,7 @@ import { useAppDispatch, useAppSelector } from "../store/store";
 import { Button } from "../components/button";
 import instance from "../api/instance";
 import { destinationActions } from "../store/destination";
+import AttractionRecommmand from "../components/attraction";
 
 function Main() {
     const position = useAppSelector((state) => state.position);
@@ -43,7 +45,7 @@ function Main() {
             .then((res) => {
                 const routes = res.data.route;
                 routes.forEach((route: any) => {
-                    console.log(route)
+                    console.log(route);
                     dispatch(
                         destinationActions.setDestination({
                             type: route.type,
@@ -116,6 +118,13 @@ function Main() {
                     >
                         Order
                     </Button>
+                    <MainFooterTitle>
+                        <h1>Famous tourist attractions</h1>
+                        <p>
+                            in <span>Pohang</span>
+                        </p>
+                    </MainFooterTitle>
+                    <AttractionRecommmand />
                 </MainFooter>
             )}
         </MainContainer>

@@ -16,4 +16,6 @@ export const Button = styled.button`
     &:active {
         transform: scale(0.98);
     }
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 `;
