@@ -41,10 +41,9 @@ function Head() {
             </HeadHeader>
             <HeadFooter>
                 <HeadFooterTitle>
-                    <h1>Get where you need to go, with Dr.t</h1>
+                    <h1>Get where you need to go, with Dr.Travel</h1>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry.
+                        Enjoy an easy and convenient trip to Pohang with the DRT bus
                     </p>
                 </HeadFooterTitle>
                 <Button

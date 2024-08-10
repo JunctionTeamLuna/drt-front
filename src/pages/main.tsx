@@ -82,7 +82,7 @@ function Main() {
                     <MainLocationInputs>
                         <Input
                             type="text"
-                            placeholder="출발지"
+                            placeholder="Departures"
                             onClick={() => {
                                 setMode("start");
                                 setLocation(true);
@@ -92,7 +92,7 @@ function Main() {
                         <hr />
                         <Input
                             type="text"
-                            placeholder="도착지"
+                            placeholder="Arrivals"
                             value={position.end.adress}
                             onClick={() => {
                                 setMode("end");
@@ -108,8 +108,6 @@ function Main() {
 
             {option && (
                 <MainFooter>
-                    <div></div>
-
                     <Button
                         onClick={() => {
                             handleSubmit();
