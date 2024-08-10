@@ -35,14 +35,15 @@ function Main() {
 
         instance
             .post("reservation", {
-                userPositionLatitude: position.start.x,
-                userPositionLongitude: position.start.y,
-                destinationLatitude: position.end.x,
-                destinationLongitude: position.end.y,
+                userPositionLatitude: position.start.y,
+                userPositionLongitude: position.start.x,
+                destinationLatitude: position.end.y,
+                destinationLongitude: position.end.x,
             })
             .then((res) => {
                 const routes = res.data.route;
                 routes.forEach((route: any) => {
+                    console.log(route)
                     dispatch(
                         destinationActions.setDestination({
                             type: route.type,
@@ -113,7 +114,7 @@ function Main() {
                             handleSubmit();
                         }}
                     >
-                        승차 신청하기
+                        Order
                     </Button>
                 </MainFooter>
             )}
