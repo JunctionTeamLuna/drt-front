@@ -51,11 +51,15 @@ function SearchLocation({ type }: { type: string }) {
 
     return (
         <SearchLocationContainer>
-            <h1>{type == "start" ? "출발" : "도착"} 장소를 검색해주세요</h1>
+            <h1>
+                {type === "start"
+                    ? "Please search for the Departure location"
+                    : "Please search for the Arrival location"}
+            </h1>
             <SearchLocationSearch onSubmit={searchLocation}>
                 <Input
                     type="text"
-                    placeholder="검색어를 입력하세요"
+                    placeholder="Enter your search term"
                     value={search}
                     onChange={(e) => {
                         setSearch(e.target.value);
