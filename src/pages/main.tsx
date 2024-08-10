@@ -27,7 +27,7 @@ function Main() {
     const [location, setLocation] = useState(false);
     const [mode, setMode] = useState("");
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (position.start.adress === "" || position.end.adress === "") {
             alert("출발지와 도착지를 입력해주세요");
             return;
@@ -52,6 +52,7 @@ function Main() {
                     );
                 });
             });
+
         setOption(false);
     };
 
