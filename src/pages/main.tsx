@@ -110,7 +110,7 @@ function Main() {
                     </span>
                 </MainLocationSelect>
             </MainLocationSection>
-            {!option && <ShowRoute />}
+            {/* {!option && <ShowRoute />} */}
             {option && (
                 <MainFooter>
                     <Button
