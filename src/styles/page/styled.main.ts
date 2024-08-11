@@ -29,7 +29,7 @@ export const MainLocationHeader = styled.div`
 `;
 
 export const MainLocationSelect = styled.div`
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 25px;
     padding: 25px;
     border-radius: 15px;

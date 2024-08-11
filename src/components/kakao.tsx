@@ -68,7 +68,7 @@ function KakaoMap() {
                     const polyline = new kakao.maps.Polyline({
                         path: linePath,
                         strokeWeight: 5,
-                        strokeColor: "#000000",
+                        strokeColor: "#595959",
                         strokeOpacity: 1,
                         strokeStyle: "solid",
                     });

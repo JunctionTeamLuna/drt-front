@@ -21,6 +21,7 @@ import { Button } from "../components/button";
 import instance from "../api/instance";
 import { destinationActions } from "../store/destination";
 import AttractionRecommmand from "../components/attraction";
+import ShowRoute from "../components/route";
 
 function Main() {
     const position = useAppSelector((state) => state.position);
@@ -44,8 +45,8 @@ function Main() {
             })
             .then((res) => {
                 const routes = res.data.route;
+
                 routes.forEach((route: any) => {
-                    console.log(route);
                     dispatch(
                         destinationActions.setDestination({
                             type: route.type,
@@ -109,7 +110,7 @@ function Main() {
                     </span>
                 </MainLocationSelect>
             </MainLocationSection>
-
+            {!option && <ShowRoute />}
             {option && (
                 <MainFooter>
                     <Button

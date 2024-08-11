@@ -13,7 +13,7 @@ export const HeadHeader = styled.div`
 `;
 
 export const HeadFooter = styled.div`
-    padding: 15px;
+    padding: 25px;
     text-align: center;
     flex: 1;
     display: flex;
@@ -31,6 +31,10 @@ export const HeadFooterTitle = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    & h1 {
+        font-size: 1.6rem;
+    }
 `;
 
 export const HeadImageContainer = styled.div`

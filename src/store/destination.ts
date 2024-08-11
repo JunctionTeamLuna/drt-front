@@ -20,12 +20,6 @@ export const destinationSlice = createSlice({
         setDestination(state, action: PayloadAction<Destination>) {
             state.destinations.push(action.payload);
         },
-        removeDestination: (state, action: PayloadAction<number>) => {
-            state.destinations.splice(action.payload, 1);
-        },
-        clearDestinations: (state) => {
-            state.destinations = [];
-        },
     },
 });
 
